@@ -1,0 +1,102 @@
+1 Kerdes: Mi a kulonbseg a Runtime Exception es az Exception kozott?
+
+
+
+A RuntimeException az Exceptionbol szarmazik ( A szuloje ) 
+
+Az Exception osztalyon vannak Checked ( ellenorzott ) Exceptions, 
+es Unchecked ( ellenorizetlen ) exceptions.
+
+Az ellenorzott hiba amikor a programozo erzekeli a hibat es kezeli. 
+A nem ellenorzott hiba ami futas kozben jon elo. 
+Az exceptionöket el kell dobni, vagy kezelni kell
+a kód összeállitásához,de a RuntimExceptionökre  nincs ilyen követelmény.
+Kezelhetjük úgy, h a metódusunkba "throws Exception"-t irunk, de itt nem kezeljük a hibát, úgyhogy
+nem ezt mondanám a legjobb megoldásnak. 
+Mivel hiba(felhalmozódnak a hibák mondjuk) esetén ilyenkonkor a programunk leállhat.
+Tudjuk még úgy is kezelni hogy: try-catch-finally
+try {   --->  hiba adódhat
+} catch (Exception e) {  --->  ha bármilyen Exception “történik” az előző try-nál,akkor fut le.
+} finally { -->  mindenképpen lefut }
+
+2 Kerdes: Hogyan tudunk egy kollekcióból bejárás közben elemeket törölni?
+
+
+iterator.remove(); parancssorral tudunk kollekcióból törölni
+    
+    Iterator <Kiscica> iterator = history.iterator ();
+    Valami valami = iterator.next();
+
+    if (valami.getname().equals("Nagycica")) {
+    iterator.remove();
+    }
+
+
+3 Kerdes: Ismertesd az OOP Koncepcioit:
+
+1) Osztály:
+Az osztály az OOP egyik alapfogalma, amely hasonló entitások csoportja.
+ Ez csak egy logikai komponens, és nem a fizikai entitás. 
+Megértjük az egyik OOP-koncepciót példán keresztül, ha van egy osztályod 
+Expensive Cars lehetnek olyan tárgyak, mint a Mercedes, BMW, Toyota stb. 
+Tulajdonságai (adatok) lehetnek ezen autók ára vagy sebessége. 
+Míg a módszereket ezekkel az autókkal lehet végrehajtani: vezetés, hátramenet, fékezés stb.
+
+2) Tárgy
+Egy objektum definiálható egy osztály példányaként, 
+és egy programban egy osztálynak több példánya is lehet.
+ Az objektum a Java OOP-koncepciók egyike, 
+amely tartalmazza az adatokat és az adatokon működő függvényt is. 
+Például – szék, bicikli, marker, toll, asztal, autó stb.
+3) Öröklés
+Az öröklődés az OOP-k egyik alapfogalma, 
+amelyben az egyik objektum a szülőobjektum tulajdonságait és viselkedését szerzi meg. 
+Szülő-gyermek kapcsolatot hoz létre két osztály között. 
+Robusztus és természetes mechanizmust kínál bármilyen szoftver rendszerezésére és felépítésére.
+
+4) Polimorfizmus
+A polimorfizmus a Java egyik OOP-fogalmára utal, 
+amely egy változó, objektum vagy függvény azon képessége, 
+hogy többféle formát öltsön. Például az angolban az ige fuss más jelentése van, 
+ha együtt használod egy laptop, lábversenyés üzleti. 
+Itt megértjük a jelentését fuss a vele együtt használt többi szó alapján. 
+Ugyanez vonatkozik a polimorfizmusra is.
+
+5) Absztrakció
+Az absztrakció a Java egyik OOP-fogalma, 
+amely lényegi jellemzők megjelenítését jelenti háttérrészletek nélkül.
+ Ez egy új adattípus létrehozásának technikája, amely egy adott alkalmazáshoz alkalmas.
+ Értsük meg az egyik OOP-koncepciót példával, autóvezetés közben nem kell foglalkoznia a belső működésével. Itt csak olyan alkatrészekkel kell foglalkoznia, mint a kormánykerék, a fogaskerekek, a gázpedál stb.
+
+6) Kapszulázás
+A beágyazás az egyik legjobb Java OOP-koncepció az adatok és a kód becsomagolására.
+ Ebben az OOPs koncepcióban egy osztály változói mindig el vannak rejtve a többi osztály elől. 
+Csak az aktuális osztály metódusaival érhető el. Például az iskolában egy diák nem létezhet osztály nélkül.
+
+7) Egyesület
+Az asszociáció két objektum kapcsolata.
+ Ez a Java egyik OOP-fogalma, amely meghatározza az objektumok közötti sokféleséget. 
+Ebben az OOP koncepcióban minden objektumnak külön életciklusa van, és nincs tulajdonosa.
+ Például sok diák kapcsolódhat egy tanárhoz, míg egy diák több tanárhoz is társulhat.
+
+8) Összevonás
+Ebben a technikában minden objektumnak külön életciklusa van. 
+Van azonban olyan tulajdonjog, hogy az utódobjektum nem tartozhat másik szülőobjektumhoz. 
+Vegyük például az osztály/tárgy osztályt és a tanárt. Itt egyetlen tanár nem tartozhat több tanszékhez, 
+de még ha töröljük is a tanszéket, a tanári objektum soha nem fog megsemmisülni.
+
+9) Összetétel
+A kompozíció az Aggregáció speciális formája. 
+Úgy is hívják death kapcsolat. Az utódobjektumoknak nincs életciklusuk, 
+így a szülőobjektum törlésekor az összes utódobjektum is automatikusan törlődik. 
+Ehhez vegyünk egy példát a Házról és a szobákról. Minden háznak több szobája is lehet. 
+Egy szoba nem válhat két különböző ház részévé. Tehát, ha törli a házat, a szoba is törlődik.
+
+
+4 kerdes: Milyen adatszerkezet segítségével lehetne a gyakorlati feladatok alatt 
+beolvasott meccsek adatait mindig dátum szerint rendezett sorrendben 
+tárolni?
+
+Map et hasznalva a legjobb adatszerkezet. 
+
+
